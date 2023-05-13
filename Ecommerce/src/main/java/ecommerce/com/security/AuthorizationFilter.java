@@ -25,7 +25,7 @@ public class AuthorizationFilter implements Filter {
  
         String path = req.getRequestURI().substring(req.getContextPath().length());
  
-        if (path.contains("Controller")) {
+        if (path.contains("Manage")) {
             if (session == null || session.getAttribute("user") == null) {
                 res.sendRedirect(req.getContextPath() + "/login.jsp");
             } else {
