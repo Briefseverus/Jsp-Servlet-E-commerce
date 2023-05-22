@@ -19,7 +19,7 @@ public class LoginController extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		request.getRequestDispatcher("login.jsp").forward(request, response);
+		request.getRequestDispatcher("/views/login.jsp").forward(request, response);
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
@@ -40,12 +40,12 @@ public class LoginController extends HttpServlet {
 		            }
 		        } else {
 		            request.setAttribute("errorMessage", "Invalid username or password");
-		            request.getRequestDispatcher("login.jsp").forward(request, response);
+		            request.getRequestDispatcher("/views/login.jsp").forward(request, response);
 		        }
 		    } catch (SQLException e) {
 		        e.printStackTrace();
 		        request.setAttribute("errorMessage", "Unable to authenticate user. Please try again later.");
-		        request.getRequestDispatcher("login.jsp").forward(request, response);
+		        request.getRequestDispatcher("/views/login.jsp").forward(request, response);
 		    }
 		}
 

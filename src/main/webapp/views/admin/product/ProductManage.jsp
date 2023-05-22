@@ -5,8 +5,7 @@
 <html>
 <head>
 <title>Quan Tri</title>
-<link rel="stylesheet"
-	href="<c:url value='/template/admin/assets/css/bootstrap.min.css' />" />
+<link rel="stylesheet" href="<c:url value='/template/admin/assets/css/bootstrap.min.css' />" />
 <link rel="stylesheet"
 	href="<c:url value='/template/admin/font-awesome/4.5.0/css/font-awesome.min.css' />" />
 <link rel="stylesheet"
@@ -114,8 +113,7 @@
 	</div>
 
 
-	<script
-		src="<c:url value='/template/admin/assets/js/bootstrap.min.js' />"></script>
+	<script src="<c:url value='/template/admin/assets/js/bootstrap.min.js' />"></script>
 	<script
 		src="<c:url value='/template/admin/assets/js/jquery-ui.custom.min.js' />"></script>
 	<script

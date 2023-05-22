@@ -1,7 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@include file="/common/taglib.jsp"%>
-<%@ page import="ecommerce.com.daos.UserDao"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -51,51 +50,29 @@
 
 		<div class="container mt-5">
 			<h1>Order List</h1>
-
 			<table class="table table-striped table-bordered">
 				<thead class="thead-dark">
 					<tr>
-						<th>Order ID</th>
-						<th>User ID</th>
-						<th>Date</th>
-						<th>Status</th>
-						<th>User Name</th>
-						<th>Full Name</th>
-						<th>Status</th>
+
+						<th>Product Name</th>
+						<th>Quantity</th>
+						<th>Thumbnail</th>
+						<th>Price</th>
 					</tr>
 				</thead>
 				<tbody>
 					<c:forEach var="pro" items="${pros}">
 						<tr>
-							<td>${pro.getOrder_id()}</td>
-							<td>${pro.getUser_id()}</td>
-							<td>${pro.getOrder_date()}</td>
-							<td>${pro.getOrder_status()}</td>
-							<td><c:set var="user"
-									value="${UserDao.getuserById(pro.getUser_id())}" /> <c:if
-									test="${user != null}">
-                ${user.getUsername()}
-            </c:if></td>
-							<td><c:set var="user"
-									value="${UserDao.getuserById(pro.getUser_id())}" /> <c:if
-									test="${user != null}">
-                ${user.getFull_name()}
-            </c:if></td>
-							<td>
-								<form action=OrderManage method="post" style="display: inline;">
-									<input type="hidden" name="action" value="delete"> <input
-										type="hidden" name="order_id" value="${pro.getOrder_id()}">
-									<button class="btn btn-danger btn-sm" type="submit"
-										onclick="if(!(confirm('Do you want to delete product??'))) return false">Delete</button>
-								</form>
-								<form method="POST" action="OrderDisplay">
-									<input type="hidden" name="orderid" value="${pro.getOrder_id()}">
-								<input type="submit" value="View">
-								</form>
-							</td>
-						</tr>
-					</c:forEach>
+							<td>${pro.productName}</td>
+							<td>${pro.quantity}</td>
+							<td><img src="${pro.productImg}" alt="Mo ta anh" width="300"
+								height="300"></td>
+							<td>${pro.price}</td>
 
+						</tr>
+
+					</c:forEach>
+					<p>${cart.getTotalPrice()}</p>
 				</tbody>
 			</table>
 		</div>

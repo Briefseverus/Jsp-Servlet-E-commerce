@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import ecommerce.com.daos.ProductDao;
+import ecommerce.com.daos.UserDao;
 import ecommerce.com.models.Cart;
 import ecommerce.com.models.Product;
 
@@ -26,7 +27,7 @@ public class HomeController extends HttpServlet {
 			List<Product> pros = proDao.getAllproduct();
 			request.setAttribute("products", pros);
 			String action = request.getParameter("action");
-
+			
 			if (action != null && "load".equals(action)) {
 				int product_id = Integer.parseInt(request.getParameter("product_id"));
 				Product product = proDao.getProductById(product_id);

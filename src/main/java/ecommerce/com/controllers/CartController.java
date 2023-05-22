@@ -40,7 +40,7 @@ public class CartController extends HttpServlet {
 				request.setAttribute("cartItems", cart.getItems());
 				request.setAttribute("cart", cart);
 			}
-			request.getRequestDispatcher("Cart.jsp").forward(request, response);
+			request.getRequestDispatcher("/views/user/Cart.jsp").forward(request, response);
 		}
 	}
 

@@ -26,7 +26,7 @@ public class OrderDetailController extends HttpServlet {
 			OrderDetailDao proDao = new OrderDetailDao();
 			List<OrderDetail> pros = proDao.getAllOrderDetail();
 			request.setAttribute("pros", pros);
-			request.getRequestDispatcher("OrderDetailManage.jsp").forward(request, response);
+			request.getRequestDispatcher("/views/admin/order/OrderDetailManage.jsp").forward(request, response);
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}

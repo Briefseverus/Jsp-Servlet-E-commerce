@@ -11,20 +11,20 @@
 			</small>
 			</a>
 		</div>
-		<div
-			class="navbar-buttons navbar-header pull-right collapse navbar-collapse"
-			role="navigation">
-			<ul class="nav ace-nav">
-				<li class="light-blue dropdown-modal"><a data-toggle="dropdown"
-					href="#" class="dropdown-toggle"> Xin chào,
-						${USERMODEL.fullName} </a>
-				<li class="light-blue dropdown-modal">
-					<form method="get" action="logout">
-						<input type="submit" value="Logout">
-					</form>
-				</li>
-				</li>
-			</ul>
+		<div class="navbar-buttons navbar-header pull-right collapse navbar-collapse" role="navigation">
+		
+				<ul class="nav ace-nav">
+					<li class="light-blue dropdown-modal">
+					<a data-toggle="dropdown" href="#" class="dropdown-toggle"> Xin chào, ${user.username} </a>
+					<li class="light-blue dropdown-modal">
+						<form method="get" action="logout">
+							<input type="submit" value="Logout">
+						</form>
+					</li>
+					</li>
+				</ul>
+		
+
 		</div>
 	</div>
 </div>

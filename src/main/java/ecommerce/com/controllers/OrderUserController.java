@@ -32,7 +32,7 @@ public class OrderUserController extends HttpServlet {
 		try {
 			List<Order> pros = OrderDao.getAllOrderByUserID(user.getUser_id());
 			request.setAttribute("pros", pros);
-			request.getRequestDispatcher("OrderDisplay.jsp").forward(request, response);
+			request.getRequestDispatcher("/views/user/order/OrderDisplay.jsp").forward(request, response);
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
@@ -63,7 +63,7 @@ public class OrderUserController extends HttpServlet {
 			// Truyền danh sách CartItem qua cho JSP
 			request.setAttribute("cartItems", cart.getItems());
 			request.setAttribute("cart", cart);
-			request.getRequestDispatcher("OrderDetailDisplay.jsp").forward(request, response);
+			request.getRequestDispatcher("/views/user/order/OrderDetailDisplay.jsp").forward(request, response);
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
