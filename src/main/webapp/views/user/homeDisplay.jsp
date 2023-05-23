@@ -54,6 +54,11 @@
 
         </div>
     </div>
+    
+      <!-- footer -->
+    <%@ include file="/common/user/footer.jsp"%>
+    <!-- footer -->
+    
     <script>
         function goToCart() {
             window.location.href = "Cart?action=view";

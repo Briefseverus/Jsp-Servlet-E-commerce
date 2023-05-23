@@ -45,20 +45,6 @@
 	margin-right: 10px;
 }
 
-.add-to-cart-button {
-	background-color: #ff5a5f;
-	color: #fff;
-	border: none;
-	padding: 8px 16px;
-	font-size: 16px;
-	border-radius: 5px;
-	cursor: pointer;
-}
-
-.add-to-cart-button:hover {
-	background-color: #e54045;
-}
-
 .product-detail-note {
 	margin-top: 20px;
 	background-color: #f8f9fa;

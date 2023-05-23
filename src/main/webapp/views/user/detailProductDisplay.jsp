@@ -40,6 +40,7 @@
                                         <li class="list-group-item">Giảm 5% khi mua kèm Gear, Đế tản nhiệt Laptop</li>
                                         <li class="list-group-item">Giảm 10% khi mua thêm RAM, HDD laptop</li>
                                         <li class="list-group-item">Vệ sinh bảo dưỡng Laptop miễn phí trọn đời trị giá: 1 triệu đồng</li>
+                                    	 
                                     </ul>
                                 </div>
                             </div>
@@ -48,7 +49,8 @@
                             <form method="post" action="Home">
                                 <input type="hidden" name="product_id" value="${detailProduct.product_id}">
                                 <input type="number" name="quantity" value="1" min="1">
-                                <button class="add-to-cart-button" type="submit">Thêm vào giỏ hàng</button>
+                                <button class="btn btn-danger" type="submit">ADD Cart</button>
+                          
                             </form>
                         </div>
                     </div>
@@ -63,9 +65,11 @@
         </div>
     </div>
 </div>
+     <!-- footer -->
+    <%@ include file="/common/user/footer.jsp"%>
+    <!-- footer -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
         crossorigin="anonymous"></script>
 </body>
 </html>
-

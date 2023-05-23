@@ -68,9 +68,16 @@
                 <input type="hidden" name="action" value="checkout" class="btn btn-danger">
                 <input type="submit" value="Checkout" class="btn btn-danger">
             </form>
+            	<form method="get" action="OrderDisplay" class="pt-3">
+					<input type="hidden" name="action" value="orderList"> 
+					<input type="submit" value="Ordered List" class="btn btn-danger" >
+				</form>
         </div>
     </div>
 </div>
+     <!-- footer -->
+    <%@ include file="/common/user/footer.jsp"%>
+    <!-- footer -->
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 </body>
